@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <EditText
+        android:id="@+id/txtNameEdit"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtName"
+        android:layout_alignParentEnd="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <requestFocus />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtSeatNoEdit"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:onClick="WriteText"
+        android:text="Confirm" />
+
+    <ListView
+        android:id="@+id/listPassenger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/btnDelete">
+    </ListView>
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:text="Name:" />
+
+    <EditText
+        android:id="@+id/txtSeatNoEdit"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtSeat"
+        android:layout_alignBottom="@+id/txtSeat"
+        android:layout_alignParentRight="true"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnConfirm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:onClick="deleteManifest"
+        android:text="Delete" />
+
+    <TextView
+        android:id="@+id/txtSeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNameEdit"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_toLeftOf="@+id/txtSeatNoEdit"
+        android:text="Seat No:" />
+
+    <TextView
+        android:id="@+id/txtFlightNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtSeat"
+        android:layout_alignParentLeft="true"
+        android:text="Flight No:" />
+
+    <EditText
+        android:id="@+id/txtFlightnoEdit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtSeatNoEdit"
+        android:layout_alignLeft="@+id/txtNameEdit"
+        android:ems="10" />
+
+</RelativeLayout>
